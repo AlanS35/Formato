@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage[spanish,activeacute]{babel}
+%\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amstext,amsthm,amscd}
+%\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+%\linespread{1.6}
+\usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point(esto lo saque del ejemplo de revtex4)
+\usepackage{bm}% bold math(esto lo saque del ejemplo de revtex4)
+\newcounter{itemR}
+\usepackage{here} %recordar usar el comandao[H] Para las  graficas que es el comando here en lugar de [h!]
+\usepackage{fancyhdr}
+%\usepackage{sidecap}
+%\usepackage[spanish,activeacute]{babel}
+%\usepackage{multirow}
+\usepackage{multicol}
+%\usepackage{array}
+%\usepackage{booktabs}% para hacer tablas profesionales con \toprule
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage[paperwidth=8.5in, paperheight=11.0in, top=1.0in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+
+\pagestyle{fancyplain}
+\fancyhead[LE,RO]{Pr\'actica $\#$1, Nombre corto de la Pr\'actica}
+\fancyhead[CE,CO]{}
+\fancyhead[RE,LO]{Clave del curso}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[CE,CO]{Laboratorio de F\'isica, UDLAP}
+\fancyfoot[RE,LO]{}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\fancypagestyle{plain}{
+   	\renewcommand{\headrulewidth}{1pt}
+   	\renewcommand{\footrulewidth}{1pt}
+}
+
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\tablename}{Tabla}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Nombre completo de la pr'actica\\ \small{Formato de ejemplo}}
+\author{\small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}}\\		% ----- Varios autores separarlos por comas:  \small{Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}, Nombre(s) de (los) autor(es)\footnote{ID; correo@udlap.mx}
+	   \small{Depto. de Actuar'ia, F'isica y Matem'aticas, Universidad de las Am'ericas Puebla, Puebla, M\'exico 72810}}
+\date{\small{\today}}
+
+\maketitle
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{abstract}
+
+En este espacio deber'as escribir un resumen del experimento planteado as'i como algunos resultados relevantes. No exceder m'as de 150 palabras.
+\\
+\\
+{\it Keywords:}  No m'as de 5 palabras clave
+\\
+\\
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\begin{multicols}{2}
+
+\section*{Objetivo y metas espec'ificas}\label{Objetivo}                                           	% -------------------- Objetivo
+
+Se exponen los objetivos principales y secundarios de la pr'actica en un p'arrafo sin enlistar, as'i como las metas espec'ificas del trabajo.
+
+\section*{Introducci'on y marco te'orico}\label{Introduccion}                              	% -------------------- Introduccion
+
+Se debe introducir la motivaci'on del tema, as'i como los fundamentos te'oricos y las ecuaciones b'asicas \cite{Einstein} sobre las cuales se sustenta el trabajo. De igual forma se debe de proponer un modelo te'orico para la propiedad f'isica a medir. Las ecuaciones
+\begin{equation}\label{Ec:1}
+	E = m c^2
+\end{equation}
+se enumeran del lado derecho para referencia dentro del texto, por ejemplo ec. (\ref{Ec:1}).
+
+La bibliograf'ia consultada debe tener referencia dentro del texto. 'Unicamente debe aparecer el material bibliogr'afico citado y en el orden de aparici'on dentro del texto. Se sugiere tener al menos tres referencias de fuentes acreditadas; p'aginas de internet como wikipedia u otras no son v'alidas.
+
+\section*{Materiales y equipos}\label{Material}                          	% -------------------- Material
+
+Incluir los materiales y equipos utilizados, as'i como su margen de error. Como ejemplo del uso de vi\~netas y numeraci'on se enlista el siguiente material
+
+\begin{itemize}
+	\item Vernier anal'ogico ($\pm$ 0.025 mm)
+	\item Term'ometro de Hg ($\pm$ 0.5 $^{\circ}$C)
+	\item Kit electrost'atico
+		\subitem Electroscopio
+		\subitem Regilete electrost'atico
+		\subitem P'endulo electrost'atico
+\end{itemize}
+
+\section*{Metodolog'ia}\label{Metodologia}				% -------------------- Metodolog'ia
+
+En esta secci'on se incluyen los puntos m'as relevantes de la metodolog'ia empleada.
+
+\section*{Resultados y an'alisis}\label{Resultados}			% -------------------- Resultados
+
+En esta secci'on se muestran los datos experimentales obtenidos y el resultado del an'alisis de los mismos. Se sugiere el uso de tablas con un peque\~no t'itulo donde se indique lo que se expone.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | r | r | }
+	\hline
+		x [m]		&	t [s] 			\\
+	\hline
+		1.0		&	1.0			\\
+		4.0		&	2.0			\\
+		9.0		&	3.0			\\
+		16.0		&	4.0			\\
+		25.0		&	5.0			\\
+	\hline
+	\end{tabular}
+	\caption{Posici\'on de la part'icula en funci\'on del tiempo}
+	\label{Tabla:1}
+\end{table}
+
+Las gr'aficas deben incluir tambien un referencia de lo que se desea mostrar, con el nombre de los ejes y las unidades utilizadas. La figura \ref{Fig:1} es un ejemplo de la gr'afica obtenida con experimento de ca'ida libre del laboratorio de mec'anica
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.2]{CaidaLibre}
+	\caption{Posici'on de la part'icula en funci'on del tiempo}
+	\label{Fig:1}
+\end{figure}
+
+\section*{Conclusiones}\label{Conclusiones}				% -------------------- Conclusiones
+
+En esta secci'on se deben exponer las conclusiones finales del trabajo sin enlistar. Por ejemplo, se puede realizar una comparaci'on entre resultados te'oricos y experimentales, discusiones sobre posibles resultados con otros modelos, discutir las posibles fuentes de error y estimar su valor, e incluso indicar porque no se lleg'o al objetivo. Otro punto importante dentro de las conclusiones es comentar si el modelo te'orico propuesto es el aduecuado, o en su defecto cuales ser'ian las propuestas para mejorar tanto el modelo te'orico como el experimento.
+
+\begin{thebibliography}{9}						% -------------------- Bibliograf'ia
+
+\bibitem{Einstein}
+   Albert Einstein,
+   \emph{The world as I see it}.
+   BN Publishing,
+   2005.
+
+\end{thebibliography}
+
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\end{multicols}
+
+\end{document}										% -------------------- End Document
